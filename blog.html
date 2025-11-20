@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jo's Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        galaxy: {
+                            dark: '#0a0014',
+                            purple: '#5b21b6',
+                            pink: '#ec4899',
+                            blue: '#3b82f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-galaxy-dark text-white overflow-x-hidden">
+    <!-- 3D Starfield Canvas Background -->
+    <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-galaxy-dark/80 backdrop-blur-md border-b border-purple-500/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Jo's Portfolio
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">About</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <button id="themeToggle" class="hidden md:block p-2 rounded-lg hover:bg-purple-500/20 transition-colors">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-purple-500/20">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="index.html" class="block nav-link">About</a>
+                <a href="blog.html" class="block nav-link active">Blog</a>
+                <a href="gallery.html" class="block nav-link">Gallery</a>
+                <a href="contact.html" class="block nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-24 min-h-screen">
+        <!-- Header -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+                    <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                        Blog
+                    </span>
+                </h1>
+                <p class="text-xl text-purple-200 max-w-2xl mx-auto animate-fade-in-delay-1">
+                    Thoughts, tutorials, and stories about web development, design, and technology.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Filter Tags -->
+        <section class="container mx-auto px-6 mb-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <button class="filter-tag active" data-filter="all">All</button>
+                    <button class="filter-tag" data-filter="web-dev">Web Development</button>
+                    <button class="filter-tag" data-filter="design">Design</button>
+                    <button class="filter-tag" data-filter="tutorial">Tutorial</button>
+                    <button class="filter-tag" data-filter="technology">Technology</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Posts Grid -->
+        <section class="container mx-auto px-6 py-8">
+            <div id="blogGrid" class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog posts will be loaded dynamically from blogs.json -->
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingState" class="text-center py-20">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+                <p class="mt-4 text-purple-200">Loading posts...</p>
+            </div>
+            
+            <!-- No Posts Found -->
+            <div id="noPosts" class="hidden text-center py-20">
+                <i class="fas fa-inbox text-6xl text-purple-500/30 mb-4"></i>
+                <p class="text-xl text-purple-200">No posts found</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-purple-500/20 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 Jo's Portfolio. All rights reserved.</p>
+                <p class="mt-2 text-sm">Built with ❤️ and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="scripts/starfield.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
