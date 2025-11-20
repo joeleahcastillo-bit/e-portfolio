@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Sunset Over Mountains",
+    "description": "A breathtaking view of the sunset painting the mountain peaks in golden hues",
+    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop",
+    "category": "Nature"
+  },
+  {
+    "id": 2,
+    "title": "City Lights at Night",
+    "description": "Urban landscape illuminated by countless lights after dark",
+    "url": "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&h=800&fit=crop",
+    "category": "Urban"
+  },
+  {
+    "id": 3,
+    "title": "Ocean Waves",
+    "description": "The mesmerizing rhythm of ocean waves crashing on the shore",
+    "url": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=800&fit=crop",
+    "category": "Nature"
+  },
+  {
+    "id": 4,
+    "title": "Forest Path",
+    "description": "A serene path winding through an ancient forest",
+    "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=800&fit=crop",
+    "category": "Nature"
+  },
+  {
+    "id": 5,
+    "title": "Modern Architecture",
+    "description": "Contemporary building design showcasing geometric patterns",
+    "url": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&h=800&fit=crop",
+    "category": "Architecture"
+  },
+  {
+    "id": 6,
+    "title": "Coffee and Code",
+    "description": "A developer's essential companion - coffee and laptop",
+    "url": "https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?w=800&h=800&fit=crop",
+    "category": "Tech"
+  },
+  {
+    "id": 7,
+    "title": "Mountain Lake",
+    "description": "Crystal clear lake reflecting the surrounding mountain peaks",
+    "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=800&fit=crop",
+    "category": "Nature"
+  },
+  {
+    "id": 8,
+    "title": "Workspace Setup",
+    "description": "A clean and minimal developer workspace",
+    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=800&fit=crop",
+    "category": "Tech"
+  },
+  {
+    "id": 9,
+    "title": "Northern Lights",
+    "description": "The magical aurora borealis dancing across the night sky",
+    "url": "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=800&h=800&fit=crop",
+    "category": "Nature"
+  },
+  {
+    "id": 10,
+    "title": "Street Art",
+    "description": "Vibrant street art bringing color to urban walls",
+    "url": "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=800&h=800&fit=crop",
+    "category": "Art"
+  },
+  {
+    "id": 11,
+    "title": "Desert Dunes",
+    "description": "Golden sand dunes creating mesmerizing patterns",
+    "url": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&h=800&fit=crop",
+    "category": "Nature"
+  },
+  {
+    "id": 12,
+    "title": "Vintage Camera",
+    "description": "Classic analog camera capturing timeless moments",
+    "url": "https://images.unsplash.com/photo-1495121553079-4c61bcce1894?w=800&h=800&fit=crop",
+    "category": "Photography"
+  },
+  {
+    "id": 13,
+    "title": "City Skyline",
+    "description": "Metropolitan skyline standing tall against the evening sky",
+    "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=800&fit=crop",
+    "category": "Urban"
+  },
+  {
+    "id": 14,
+    "title": "Coding Screen",
+    "description": "Lines of code displayed on a modern monitor",
+    "url": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=800&fit=crop",
+    "category": "Tech"
+  },
+  {
+    "id": 15,
+    "title": "Autumn Forest",
+    "description": "Trees ablaze with autumn colors",
+    "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
+    "category": "Nature"
+  }
+]
