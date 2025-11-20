@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        galaxy: {
+                            dark: '#0a0014',
+                            purple: '#5b21b6',
+                            pink: '#ec4899',
+                            blue: '#3b82f6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-galaxy-dark text-white overflow-x-hidden">
+    <!-- 3D Starfield Canvas Background -->
+    <canvas id="starfield" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-galaxy-dark/80 backdrop-blur-md border-b border-purple-500/20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Joe
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link active">About</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <button id="themeToggle" class="hidden md:block p-2 rounded-lg hover:bg-purple-500/20 transition-colors">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-purple-500/20">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="index.html" class="block nav-link active">About</a>
+                <a href="blog.html" class="block nav-link">Blog</a>
+                <a href="gallery.html" class="block nav-link">Gallery</a>
+                <a href="contact.html" class="block nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-24 min-h-screen">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Profile Picture -->
+                    <div class="profile-picture-container">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-50 animate-pulse"></div>
+                            <img src="https://6.soompi.io/wp-content/uploads/image/20250110045941_Hyeri.jpg?s=900x600&e=t" alt="Profile Picture" class="relative w-64 h-64 rounded-full object-cover border-4 border-purple-500/50 shadow-2xl">
+                        </div>
+                    </div>
+                    
+                    <!-- About Text -->
+                    <div class="flex-1 text-center md:text-left">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
+                            <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                                Hi, I'm Joe
+                            </span>
+                        </h1>
+                        <p class="text-xl text-purple-200 mb-6 animate-fade-in-delay-1">
+                            Creative Developer & Digital Storyteller
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-8 animate-fade-in-delay-2">
+                            I'm passionate about creating beautiful, functional web experiences that make a difference. 
+                            With expertise in modern web technologies, I bring ideas to life through code, design, and creativity.
+                        </p>
+                        
+                        <!-- Social Links -->
+                        <div class="flex gap-4 justify-center md:justify-start animate-fade-in-delay-3">
+                            <a href="https://github.com" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:jo@example.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    What I Do
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Skill Card 1 -->
+                    <div class="skill-card">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-code text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                        <p class="text-gray-300">
+                            Building responsive, accessible, and performant web applications using modern technologies.
+                        </p>
+                    </div>
+                    
+                    <!-- Skill Card 2 -->
+                    <div class="skill-card">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-paint-brush text-pink-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                        <p class="text-gray-300">
+                            Crafting beautiful user interfaces with attention to detail and user experience.
+                        </p>
+                    </div>
+                    
+                    <!-- Skill Card 3 -->
+                    <div class="skill-card">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-mobile-alt text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mobile First</h3>
+                        <p class="text-gray-300">
+                            Creating seamless experiences across all devices with responsive design principles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interests Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Beyond Code
+                </h2>
+                
+                <div class="glass-card p-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-book text-2xl text-purple-400 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Reading</h3>
+                                <p class="text-gray-300">Always learning through books on tech, design, and philosophy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-camera text-2xl text-pink-400 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Photography</h3>
+                                <p class="text-gray-300">Capturing moments and exploring visual storytelling.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-music text-2xl text-blue-400 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Music</h3>
+                                <p class="text-gray-300">Creating playlists and discovering new artists across genres.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-hiking text-2xl text-purple-400 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Travel</h3>
+                                <p class="text-gray-300">Exploring new places and cultures around the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-purple-500/20 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 Jo's Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="scripts/starfield.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
